@@ -223,7 +223,7 @@ uint8_t bluetooth_stack_heap[DEFAULT_BLUETOOTH_HEAP(MAX_CONNECTIONS)];
 /* Bluetooth stack configuration parameters (see "UG136: Silicon Labs Bluetooth C Application Developer's Guide" for details on each parameter) */
 static gecko_configuration_t config = {
   .config_flags = 0,                                   /* Check flag options from UG136 */
-#if defined(FEATURE_LFXO)
+#if 0 //defined(FEATURE_LFXO)
   .sleep.flags = SLEEP_FLAGS_DEEP_SLEEP_ENABLE,        /* Sleep is enabled */
 #else
   .sleep.flags = 0,
@@ -416,29 +416,6 @@ void initTxRXActive()
 
 }
 #endif
-
-#if 0
-
-/**
- * @brief  Main function
- */
-int main(void)
-{
-  /* Initialize device */
-  initMcu();
-  /* Initialize board */
-  initBoard();
-  /* Initialize application */
-  initApp();
-  /* Start application */
-  appMain(&config);
-}
-
-/** @} (end addtogroup app) */
-/** @} (end addtogroup Application) */
-
-#endif
-
 
 
 /**************************************************************************//**

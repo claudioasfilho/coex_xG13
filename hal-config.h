@@ -35,11 +35,11 @@
 
 
 // $[COEX]
-#define HAL_COEX_ENABLE                    (0)
+#define HAL_COEX_ENABLE                    (1)
 
 #define BSP_COEX_REQ_PIN                   (10)
 #define BSP_COEX_REQ_PORT                  (gpioPortC)
-#define BSP_COEX_REQ_ASSERT_LEVEL          (0)
+#define BSP_COEX_REQ_ASSERT_LEVEL          (1)
 #define HAL_COEX_REQ_SHARED                (0)
 #define HAL_COEX_REQ_BACKOFF               (15)
 #define HAL_COEX_REQ_WINDOW                (50+15)
@@ -51,7 +51,7 @@
 
 #define BSP_COEX_PRI_PIN                   (12)
 #define BSP_COEX_PRI_PORT                  (gpioPortD)
-#define BSP_COEX_PRI_ASSERT_LEVEL          (0)
+#define BSP_COEX_PRI_ASSERT_LEVEL          (1)
 #define HAL_COEX_PRI_SHARED                (0)
 
 #define HAL_COEX_RX_HIPRI                  (1)
