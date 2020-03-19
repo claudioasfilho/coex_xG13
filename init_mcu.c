@@ -123,31 +123,20 @@ static void initMcu_clocks(void)
   // Enabling HFBUSCLKLE clock for LE peripherals
   CMU_ClockEnable(cmuClock_HFLE, true);
 
+
   //To use PLFRCO please remove commenting of these lines
   //and comment out or delete the LFXO lines if they are present
   //If using PLFRCO update gecko_configuration_t config's
   //.bluetooth.sleep_clock_accuracy to 500 (ppm)
- // #if defined(PLFRCO_PRESENT)
-    /* Ensure LE modules are accessible */
+//  #if defined(PLFRCO_PRESENT)
+//    /* Ensure LE modules are accessible */
 //    CMU_ClockEnable(cmuClock_CORELE, true);
-    /* Enable PLFRCO as LFECLK in CMU (will also enable oscillator if not enabled) */
- //   CMU_ClockSelectSet(cmuClock_LFA, cmuSelect_PLFRCO);
- //   CMU_ClockSelectSet(cmuClock_LFB, cmuSelect_PLFRCO);
- //   CMU_ClockSelectSet(cmuClock_LFE, cmuSelect_PLFRCO);
+//    /* Enable PLFRCO as LFECLK in CMU (will also enable oscillator if not enabled) */
+//    CMU_ClockSelectSet(cmuClock_LFA, cmuSelect_PLFRCO);
+//    CMU_ClockSelectSet(cmuClock_LFB, cmuSelect_PLFRCO);
+//    CMU_ClockSelectSet(cmuClock_LFE, cmuSelect_PLFRCO);
+//  #endif
 
- // #endif
-
-
-
-  //SystemLFXOClockSet(BSP_CLK_LFXO_FREQ);
-
-  CMU_OscillatorEnable(cmuOsc_LFRCO, true, true);
-  CMU_ClockSelectSet(cmuClock_LFA, cmuSelect_LFRCO);
-  CMU_ClockSelectSet(cmuClock_LFB, cmuSelect_LFRCO);
-  CMU_ClockSelectSet(cmuClock_LFE, cmuSelect_LFRCO);
-
-
-#if NOLFXO
   // Initialize LFXO
   CMU_LFXOInit_TypeDef lfxoInit = BSP_CLK_LFXO_INIT;
   lfxoInit.ctune = BSP_CLK_LFXO_CTUNE;
@@ -159,7 +148,6 @@ static void initMcu_clocks(void)
   CMU_ClockSelectSet(cmuClock_LFA, cmuSelect_LFXO);
   CMU_ClockSelectSet(cmuClock_LFB, cmuSelect_LFXO);
   CMU_ClockSelectSet(cmuClock_LFE, cmuSelect_LFXO);
-#endif
 }
 
 static void initHFXO(void)
@@ -172,7 +160,7 @@ static void initHFXO(void)
 #if defined(_SILICON_LABS_32B_SERIES_1)
     set_HFXO_CTUNE(DEVINFO_MODULEINFO_CRYSTALOSCCALVAL);
 #elif defined(_SILICON_LABS_32B_SERIES_2)
-    set_HFXO_CTUNE(BSP_CLK_HFXO_CTUNE);
+    set_HFXO_CTUNE(DEVINFO->MODXOCAL & _DEVINFO_MODXOCAL_HFXOCTUNEXIANA_MASK);
 #endif
   }
   // if User page has CTUNE from studio use that in 2nd place

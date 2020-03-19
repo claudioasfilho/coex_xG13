@@ -5,7 +5,7 @@
 
 # use PATH_GCCARM env var to override default path for gcc-arm
 if [[ -z ${PATH_GCCARM} ]]; then
-  OBJCOPY="/Users/clfilho/projects/Simplicity Studio 04-19/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy"
+  OBJCOPY="/Applications/Simplicity Studio.app/Contents/Eclipse/developer/toolchains/gnu_arm/7.2_2017q4/bin/arm-none-eabi-objcopy"
   if [[ `uname` == CYGWIN* ]]; then OBJCOPY="`cygpath ${OBJCOPY}`"; fi
 else
   OBJCOPY="${PATH_GCCARM}/bin/arm-none-eabi-objcopy"
@@ -13,7 +13,7 @@ fi
 
 # use PATH_SCMD env var to override default path for Simplicity Commander
 if [[ -z ${PATH_SCMD} ]]; then
-  COMMANDER="/Users/clfilho/projects/Simplicity Studio 04-19/Simplicity Studio.app/Contents/Eclipse/developer/adapter_packs/commander/Commander.app/Contents/MacOS/commander"
+  COMMANDER="/Applications/Simplicity Studio.app/Contents/Eclipse/developer/adapter_packs/commander/Commander.app/Contents/MacOS/commander"
   if [[ `uname` == CYGWIN* ]]; then COMMANDER="`cygpath ${COMMANDER}`"; fi
 else
   COMMANDER="${PATH_SCMD}/commander"

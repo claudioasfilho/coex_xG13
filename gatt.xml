@@ -9,7 +9,7 @@
     <!--Device Name-->
     <characteristic id="device_name" name="Device Name" sourceId="org.bluetooth.characteristic.gap.device_name" uuid="2A00">
       <informativeText/>
-      <value length="17" type="utf-8" variable_length="false">Throughput Tester</value>
+      <value length="17" type="utf-8" variable_length="false">coex13</value>
       <properties read="true" read_requirement="mandatory" write="true" write_requirement="optional"/>
     </characteristic>
     

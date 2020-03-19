@@ -49,8 +49,8 @@ void initBoard(void)
   CMU_ClockEnable(cmuClock_GPIO, true);
 
   // Put the SPI flash into Deep Power Down mode for those radio boards where it is available
-//  MX25_init();
- // MX25_DP();
+  MX25_init();
+  MX25_DP();
   // We must disable SPI communication
- // MX25_deinit();
+  MX25_deinit();
 }

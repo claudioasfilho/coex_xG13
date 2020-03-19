@@ -2,11 +2,12 @@
 //
 //
 
-Executing: bgbuild (/Users/clfilho/projects/Simplicity Studio 04-19/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v2.6/protocol/bluetooth/bin/bgbuild)
+Executing: bgbuild (/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/gecko_sdk_suite/v2.6/protocol/bluetooth/bin/bgbuild)
 Standard output
 ALL OK
 
 Error/Warning output
+WARNING: 2a00 length attribute is 17 but actual value length is 6. 17 will be used.
 WARNING: 47b73dd6dee34da19be0f5c539a9a4be length attribute is 255 but actual value length is 1. 255 will be used.
 WARNING: 6109b631a6434a5183d22059700ad49f length attribute is 255 but actual value length is 1. 255 will be used.
 WARNING: 6b540d5b6abb4e6584d1a9c328af2508 length attribute is 255 but actual value length is 1. 255 will be used.

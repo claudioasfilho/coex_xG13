@@ -6,4 +6,9 @@ Executing: bgbuild (/Users/clfilho/projects/Simplicity Studio 04-19/Simplicity S
 Standard output
 ALL OK
 
+Error/Warning output
+WARNING: 47b73dd6dee34da19be0f5c539a9a4be length attribute is 255 but actual value length is 1. 255 will be used.
+WARNING: 6109b631a6434a5183d22059700ad49f length attribute is 255 but actual value length is 1. 255 will be used.
+WARNING: 6b540d5b6abb4e6584d1a9c328af2508 length attribute is 255 but actual value length is 1. 255 will be used.
+
 
